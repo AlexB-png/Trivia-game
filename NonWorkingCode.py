@@ -96,18 +96,10 @@ def about():
     print('''\n==========ABOUT US==========
 This project has been created by ACC Ltd.''')
 
-
-
-
-
-
-
-
-
 anotherVariable = 1
 
 correct = 0
-if anotherVariable != 7:
+if anotherVariable != 5:
     print('\n=========ACC: QUIZ MASTER==========')
     print('-----------------------------------------')
     print('1. PLAY QUIZ')
@@ -137,7 +129,7 @@ if anotherVariable != 7:
             
         elif anotherVariable == 3:
             username = input("What is the username?")
-            print("Passwrd has been hidden for your safety")
+            print("Password has been hidden for your safety")
             password = getpass.getpass(prompt='PASSWORD: ')
             if username == "Roger2909":
                 if password == "ADMIN":
@@ -156,7 +148,11 @@ if anotherVariable != 7:
             rules()
             correct=1
         elif anotherVariable == 5:
-            print("Exiting software")
+            os.system('CLS')
+            print("Exiting software. . .")
+            time.sleep(5)
+            os.system('CLS')
+            print("See you again soon!")
             correct=1
         elif anotherVariable == 6:
             about()
@@ -164,6 +160,7 @@ if anotherVariable != 7:
         else:
             print('WRONG INPUT. ENTER THE CHOICE AGAIN')
             anotherVariable = int(input('ENTER YOUR CHOICE: '))
+
 
 
 
